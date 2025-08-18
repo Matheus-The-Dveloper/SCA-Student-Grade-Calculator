@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Grade Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <img src="school-logo.png" alt="School Logo" class="logo">
+    <h1>Swakopmund Christian Academy</h1>
+  </header>
+
+  <main>
+    <h2 class="page-title">Student Grade Calculator</h2>
+    <p class="page-intro">
+      Enter your assignments, scores, and their weight in the course. Make sure total weight = 100%.
+    </p>
+
+    <div class="calc-container">
+      <table id="gradesTable">
+        <thead>
+          <tr>
+            <th>Assignment</th>
+            <th>Score (%)</th>
+            <th>Weight (%)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" placeholder="Assignment 1 (Optional)"></td>
+            <td><input type="number" min="0" max="100" step="1" placeholder="0-100"></td>
+            <td><input type="number" min="1" step="1" placeholder="Weight"></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="button-group">
+        <button id="clearBtn" class="btn gray"><span class="icon">🗑️</span> Clear</button>
+        <button id="addRowBtn" class="btn gray"><span class="icon">➕</span> Add Row</button>
+        <button id="calculateBtn" class="btn green"><span class="icon">🧮</span> Calculate</button>
+      </div>
+
+      <div id="result">
+        <p>Total Final Mark: <span id="totalMarks">0</span>%</p>
+        <p>Letter Grade: <span id="letterGrade"></span></p>
+      </div>
+    </div>
+
+    <p class="after-calc-text">
+      Use our Student Grade Calculator to calculate the grade of all your assignments, modules or courses in order to get your final grade.
+    </p>
+
+    <!-- Information Section -->
+    <div class="info-section">
+        <h2>Calculate Your Student Grade</h2>
+        <p>
+            Our Student Grade Calculator takes a percentage mark for each of your assignments or modules,
+            together with the percentage weighting, and returns a final grade for the assignments you have completed so far.
+        </p>
+
+        <h3>How Do I Calculate My Student Assignment Grade?</h3>
+        <p>
+            To work out your student grade for your module, or assignment, we take the marks (or grades) multiplied by their respective weights,
+            sum them together, and then divide the total by the sum of the weights.
+        </p>
+
+        <h3>Example Calculation:</h3>
+        <p>
+            Student A is studying a degree in Computer Science and he is calculating three assignments so far. They want to calculate their final grade for a certain module.
+        </p>
+        <table class="example-table">
+            <thead>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Mark (%)</th>
+                    <th>Weight (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Assignment 1</td>
+                    <td>66</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Assignment 2</td>
+                    <td>55</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Assignment 3</td>
+                    <td>71</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <strong>Calculation:</strong><br>
+            (66 × 40 + 55 × 30 + 71 × 30) ÷ (40 + 30 + 30) = <strong>64%</strong> → Letter Grade: <span class="grade-C">D</span>
+        </p>
+
+
+        <h3>Grade Symbols Explanation</h3>
+<p>
+    The following table shows how percentage marks are converted into letter grades:
+</p>
+<table class="example-table">
+    <thead>
+        <tr>
+            <th>Percentage Range (%)</th>
+            <th>Grade</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>90 – 100</td>
+            <td class="grade-A">A</td>
+            <td>Excellent</td>
+        </tr>
+        <tr>
+            <td>80 – 89</td>
+            <td class="grade-B">B</td>
+            <td>Very Good</td>
+        </tr>
+        <tr>
+            <td>70 – 79</td>
+            <td class="grade-C">C</td>
+            <td>Good</td>
+        </tr>
+        <tr>
+            <td>60 – 69</td>
+            <td class="grade-D">D</td>
+            <td>Satisfactory</td>
+        </tr>
+        <tr>
+            <td>50 – 59</td>
+            <td class="grade-E">E</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>40 – 49</td>
+            <td class="grade-F">F</td>
+            <td>Fail</td>
+        </tr>
+        <tr>
+            <td>0 – 39</td>
+            <td class="grade-U">Ungraded (U)</td>
+            <td>Not Achieved</td>
+        </tr>
+    </tbody>
+</table>
+<p><em>Note: U = Ungraded (below 40%). Students must achieve at least 40% to pass.</em></p>
+
+<p class="contact-note">
+    If you have any problems using our Student Grade Calculator, please contact us below using the contact details provided.
+</p>
+</div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-contacts">
+        <h4>Contacts:</h4>
+        <p>📧 Email: <a href="mailto:ulambamatheus@gmail.com">ulambamatheus@gmail.com</a></p>
+        <p>📞 Phone: <a href="tel:+264852918380">+264 85 2918380</a></p>
+      </div>
+      <div class="footer-info">
+        <img src="school-logo.png" alt="School Logo" class="footer-logo">
+        <div>
+          <h3>Swakopmund Christian Academy</h3>
+          <p>137 Anton Lubowski Ave, Kramersdorf, Swakopmund</p>
+          <p class="portal">Student Grade Calculator • 2025</p>
+        </div>
+      </div>
+    </div>
+    <p class="developer-credit">© 2025 Developed by Ulamba Matheus</p>
+  </footer>
+
+  <!-- Custom Validation Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="popupMessage"></span>
+      <button id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

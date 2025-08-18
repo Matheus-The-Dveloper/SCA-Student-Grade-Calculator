@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6464 0%, #4facfe 50%, #00f2fe 100%);
+    color: #fff;
+    padding-top: 80px; /* Prevents content hiding behind fixed header */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.logo {
+    height: 60px; /* Bigger logo */
+    width: auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    align-items: center;    /* keep them centered horizontally */
+    padding: 20px;
+    flex: 1;
+}
+
+
+.calc-container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #f4f4f4;
+    font-weight: bold;
+}
+
+input {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn .icon {
+    font-size: 1.1rem;
+}
+
+.btn.gray {
+    background: #888;
+    color: white;
+}
+
+.btn.green {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
+.deleteRowBtn {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deleteRowBtn:hover {
+    background: darkred;
+}
+
+/* Result styling */
+#result {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.grade-A { color: limegreen; }
+.grade-B { color: dodgerblue; }
+.grade-C { color: gold; }
+.grade-D { color: orange; }
+.grade-E { color: orangered; }
+.grade-F { color: red; }
+.grade-U { color: #444; font-weight: bold; } /* Dark gray, bold for Ungraded */
+
+
+/* Footer at bottom */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; /* spread contacts and logo/info */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Contacts (left side) */
+.footer-contacts {
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.footer-contacts h4 {
+    margin-bottom: 6px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.footer-contacts a {
+    color: #4facfe;
+    text-decoration: none;
+}
+
+.footer-contacts a:hover {
+    text-decoration: underline;
+}
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.footer-logo {
+    height: 50px;
+    margin-bottom: 8px;
+    width: auto;
+}
+
+.footer-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.footer-info p {
+    margin: 3px 0;
+    font-size: 0.95rem;
+}
+
+.footer-info .portal {
+    font-size: 0.85rem;
+    color: #ddd;
+}
+
+.developer-credit {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: center;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+    table, thead, tbody, tr, th, td {
+        display: block;
+    }
+    th {
+        display: none;
+    }
+    td {
+        margin-bottom: 10px;
+        text-align: left;
+    }
+}
+.info-section {
+    margin-top: 25px;
+    max-width: 800px;
+    width: 100%;
+    color: white;
+    padding: 0;          /* remove extra box padding */
+    background: none;    /* remove background */
+    border-radius: 0;    /* remove rounded corners */
+}
+
+
+.info-section h2, 
+.info-section h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.example-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.example-table th, 
+.example-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.example-table th {
+    background: #f4f4f4;
+    font-weight: bold;
+}
+.after-calc-text {
+    max-width: 800px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+}
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.page-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Popup background */
+.popup {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup box */
+.popup-content {
+    background: #fff;
+    color: #000;
+    padding: 20px 25px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.popup-content button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background: crimson;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.popup-content button:hover {
+    background: darkred;
+}
